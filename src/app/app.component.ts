@@ -13,9 +13,9 @@ import {AfterViewInit, Component, TemplateRef, ViewChild, ViewContainerRef, View
   `
 })
 export class AppComponent implements AfterViewInit {
-  @ViewChild('vc', {read: ViewContainerRef}) vc: ViewContainerRef;
-  @ViewChild('t1', {read: TemplateRef}) t1: TemplateRef<null>;
-  @ViewChild('t2', {read: TemplateRef}) t2: TemplateRef<null>;
+  @ViewChild('vc', {read: ViewContainerRef, static: false}) vc: ViewContainerRef;
+  @ViewChild('t1', {read: TemplateRef, static: false}) t1: TemplateRef<null>;
+  @ViewChild('t2', {read: TemplateRef, static: false}) t2: TemplateRef<null>;
   view1: ViewRef;
   view2: ViewRef;
 
